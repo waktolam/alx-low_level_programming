@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main function
- * ends with 0
+ * main - write to stdout
+ * Return: Always 0
  */
 int main(void)
 {
