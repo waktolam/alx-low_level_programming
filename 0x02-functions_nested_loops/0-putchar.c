@@ -1,18 +1,19 @@
 #include <stdio.h>
 /**
-  *main - the main function
+  * main - the main function
   *
-  *Return : 0
+  * Return : 0
   */
 int main(void)
 {
 	char *pc = "_putchar";
-	
-	while (*pc){
-		_putchar(*pc);
+
+	while (*pc)
+	{
+		putchar(*pc);
 		pc++;
 	}
-	_putchar("\n");
+	putchar('\n');
 
 	return (0);
 }
