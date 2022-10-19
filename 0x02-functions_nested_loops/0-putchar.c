@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <main.h>
 /**
   * main - the main function
@@ -11,10 +10,10 @@ int main(void)
 
 	while (*pc)
 	{
-		putchar(*pc);
+		_putchar(*pc);
 		pc++;
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
