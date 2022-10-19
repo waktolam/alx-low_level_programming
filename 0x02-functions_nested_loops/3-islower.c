@@ -4,9 +4,9 @@
   * @ch - character
   * Return: 1 if character is lower else 0
   */
-int _islower(int ch)
+int _islower(int c)
 {
-  if (ch => "a" && ch <= "z")
+  if (c => "a" && c <= "z")
     return (1);
   else
     return (0);
