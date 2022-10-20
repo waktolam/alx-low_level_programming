@@ -1,8 +1,12 @@
+#include "holberton.h"
+
 /**
  * print_line - a function that draws a straight line in the terminal
- * @n: a number
- * Return: 0
+ * @n: number of times
+ *
+ * Return: void
  */
+
 
 void print_line(int n)
 {
