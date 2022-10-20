@@ -1,29 +1,32 @@
+#include <stdio.h>
+#include "holberton.h"
+
 /**
- * main - prints the numbers from 1 to 100
- * 3 multiples print Fizz instead of the number
- * 5 multiples print Buzz instead of the number
- * 3 & 5 multiples print FizzBuzz instead of the number
- * Return: Always 0 (Success)
+ * main - FizzBuzz
+ *
+ * Description: prints the numbers 1 - 100
+ * print Fizz for multiples of 3, 
+ * print Buzz for multiples of 5,
+ * print FizzBuzz for multiples of both
+ *
+ * Return: always 0
  */
 int main(void)
 {
 	int i;
-	char f[] = "Fizz";
-	char b[] = "Buzz";
-	char fb[] = "FizzBuzz";
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i == 100)
-			printf("%s", b);
-		else if ((i % 3 == 0) && (i % 5 == 0))
-			printf("%s ", fb);
+		if (i % 15 == 0)
+			printf("FizzBuzz");
 		else if (i % 3 == 0)
-			printf("%s ", f);
+			printf("Fizz");
 		else if (i % 5 == 0)
-			printf("%s ", b);
+			printf("Buzz");
 		else
-			printf("%d ", i);
+			printf("%i", i);
+		if (i < 100)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
