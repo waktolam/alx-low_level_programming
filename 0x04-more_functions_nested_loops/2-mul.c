@@ -3,7 +3,7 @@
  * mul - multiplies two numbers
  * @a: digit
  * @b: digit
- * Return: 1 if number, else 0
+ * Return: integer
  */
 int mul(int a, int b)
 {
