@@ -1,28 +1,32 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * _strstr - Write a function that locates a substring.
- *
- * @haystack: This is the input string
- * @needle: This is a find to locate in the string
- *
- * Return: a pointer 
- */
+* _strstr - function locate
+* @haystack: pointer to char
+* @needle: pointer to char
+* Return: 0
+*/
 
 char *_strstr(char *haystack, char *needle)
 {
+	char *result = haystack, *fneedle = needle;
+
 	while (*haystack)
 	{
-		char *temp;
-
-		temp = haystack;
-		while (*needle == *haystack)
+		while (*needle)
 		{
-			haystack++, needle++;
+			if (*haystack++ != *needle++)
+			{
+				break;
+			}
 		}
-		if (*needle == '\0')
-			return (temp);
-		haystack++;
+		if (!*needle)
+		{
+			return (result);
+		}
+		needle = fneedle;
+		result++;
+		haystack = result;
 	}
 	return (0);
 }
