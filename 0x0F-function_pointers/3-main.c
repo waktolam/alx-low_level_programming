@@ -1,17 +1,17 @@
 #include "3-calc.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - ...
- * @argc: ...
- * @argv: ...
- *
- * Return: ...
- */
+  * main - main.
+  * @argc: argument count.
+  * @argv: argument values.
+  * Return: 0.
+  */
 int main(int argc, char *argv[])
 {
-	int (*oprt)(int, int);
+	int num1, num2, result;
+	int (*skrt)(int, int);
 
 	if (argc != 4)
 	{
@@ -19,14 +19,17 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	oprt = get_op_func(argv[2]);
+	num1 = atoi(argv[1]),
+	num2 = atoi(argv[3]);
 
-	if (!oprt)
+	skrt = get_op_func(argv[2]);
+	if (skrt == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+	result = skrt(num1, num2);
+	printf("%d\n", result);
 
-	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
